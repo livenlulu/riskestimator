@@ -1,0 +1,263 @@
+    
+    html, body {
+    width: 95%;
+    background: white;
+    margin: auto;
+    }
+
+    
+    h6 {
+      font-size: 20px;
+      padding-left: 10%;
+      font-weight:600;
+      font-family: 'Dosis', sans-serif;
+
+    }
+
+    h2 {
+      font-size: 26px;
+      padding-left: 5%;
+      font-weight:300;
+      font-family: 'Roboto', sans-serif;
+      line-height: 30px;
+    }
+
+    h3 {
+      line-height: 1px;
+      font-weight: 300;
+    }
+
+    h4 {
+      font-size: 20px;
+      padding-left: 5%;
+      font-weight:700;
+      font-family: 'Archivo Narrow', sans-serif;
+      line-height: 10px;
+
+    }
+
+    h5 {
+      font-size: 13px;
+      line-height: 10px;
+      font-weight:400;
+      padding-left: 2px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    li:visited {
+      background-color: white;
+    }
+
+    #infoWindow {
+      background: #f5f5f3;
+      padding: 0px;
+      margin-top: 10px;
+      border-radius: 10px;
+      font-size: 23px;
+      position: relative;
+      top: 10px;
+      display: inline;
+      margin-left: 5px;
+      float: left;
+      font-weight: 600;
+      font-family: 'Dosis', sans-serif;
+      color: black;
+    }
+
+    .map {
+      width: 100%;
+      height: 550px;
+      background-color: #f5f5f3;
+    }
+
+    .row {
+      padding-right: 0px;
+      margin-right: 0px;
+    }
+
+    .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    }
+
+    .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+    }
+
+    .legend {
+    line-height: 18px;
+    color: #555;
+    }
+
+    .legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+    background-color: white;
+    }
+
+    .navbar-default {
+      margin-bottom: 0px;
+      cursor: pointer;
+      font-family: 'Oswald';
+      border-bottom: 2px solid #000;
+      border-color: #fff;
+    }
+    .navbar-default:visited {
+      margin-bottom: 0px;
+      cursor: pointer;
+    }
+
+/*    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:visited {
+      background-color: black;
+
+    }*/
+    .navbar-nav {
+      border-radius: 0px;
+      border-bottom-width: 2px;
+      border-bottom: black;
+
+    }
+    .navbar {
+      border-radius: 0px;
+    }
+    
+
+/*    a#four.myButton:active, a#four.myButton:hover, a#four.myButton:visited, a#four.myButton:link{
+      background-color: black;
+    }*/
+  
+
+    .legendGradient {
+    width: 150px;
+    }
+
+    .heatMapBar {
+      height: 6px;
+      background: -webkit-linear-gradient(left,#dc0023,#f74a27,#fbb100,#20c063);
+      border-radius: 1000px;
+    }
+
+    .welcome-options .inner-container {
+    background: #EAEEF1;
+    padding: 50px;
+    display: inline-block;
+    box-shadow: 1px 7px 10px rgba(0,0,0,0.2);
+    }
+
+    .generic-background {
+    border: 1px solid #e6e6e6;
+    }
+
+    .popup-bg {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    opacity: 0.5;
+    z-index: 2000;
+    position: absolute;
+    top: 0px;
+    }
+
+    #left {
+      background: #f5f5f3;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      top: 10px;
+      width: auto;
+      display: inline;
+      margin-left: 10px;
+      float: left;
+      font-family: 'Dosis', sans-serif;
+    }
+
+    .dropdown {
+      padding-left: 5%;
+      float: left;
+    }
+
+    .form-control {
+      font-family: 'roboto', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      padding-left: 10px;
+
+    }
+
+    #bg {
+      background-color: #f5f5f3;
+    }
+
+    .btn-default {
+      border-radius: 0px;
+      font-size: 12px;
+      font-family: Roboto;
+      float: right;
+    }
+
+    #custom-search-form {
+        margin:0;
+        margin-top: 15px;
+        padding: 0;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+    }
+ 
+    #custom-search-form .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: width  0.2s ease-in-out;
+    -moz-transition:width  0.2s ease-in-out;
+    -o-transition: width  0.2s ease-in-out;
+    transition: width  0.2s ease-in-out;
+    }
+ 
+    #custom-search-form button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }   
+    .search-query:focus{
+        width: 260px;
+    }   
+
+    .form-group {
+      padding-top: 1px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }
+
+    #ex1Slider .slider-selection {
+  background: #BABABA;
+}
