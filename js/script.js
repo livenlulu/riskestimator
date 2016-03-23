@@ -149,7 +149,7 @@ $('#ex1').slider({
     console.log(feature);
 
     //console.log(layer.feature.properties.rbLocation); 
-    $('#infoWindow').html(layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties.aAccommodation + '%' + '<br>' + '</h3>' + '<br>'  + 'Median Monthly Rent: ' + '<br>' + '<h3>' +'$' +layer.feature.properties.VALUE1 + '</h3>'); 
+    $('#infoWindow').html(layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties.aAccommodation + '%' + '<br>' + '</h3>' + '<br>'  + 'Zipcode: ' + '<br>' + '<h3>' +layer.feature.properties.VALUE1 + '</h3>'); 
   }
 
   //this runs on mouseout
