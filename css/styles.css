@@ -255,7 +255,7 @@
         z-index: 3;   
     }   
     .search-query:focus{
-        width: 260px;
+        width: 200px;
     }   
 
     .form-group {
@@ -265,5 +265,7 @@
     }
 
     #ex1Slider .slider-selection {
-  background: #BABABA;
-}
+      background: #BABABA;
+    }
+
+    

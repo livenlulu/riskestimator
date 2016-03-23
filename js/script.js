@@ -81,10 +81,10 @@ $('#ex1').slider({
 
   //this function takes a value and returns a color based on which bucket the value falls between
   function getColor(burden) {
-      return burden > 40 ? '#dc0023' :
-             burden > 35  ? '#F97932' :
+      return burden > 50 ? '#dc0023' :
+             burden > 40  ? '#F97932' :
              burden > 30  ? '#DDB04B' :
-             burden > 25  ? '#a6d96a' :
+             burden > 20  ? '#a6d96a' :
                         '#72BF21';
   }
 
@@ -92,7 +92,7 @@ $('#ex1').slider({
   legend.onAdd = function (map) {
 
       var div = L.DomUtil.create('div', 'info legend'),
-          grades = [0, 25, 30, 35, 40],
+          grades = [0, 20, 30, 40, 50],
           labels = [];
 
       // loop through our density intervals and generate a label with a colored square for each interval
@@ -110,7 +110,7 @@ $('#ex1').slider({
   //this function returns a style object, but dynamically sets fillColor based on the data
   function style(feature) {
     return {
-        fillColor: getColor(feature.properties.rbpercent),
+        fillColor: getColor(feature.properties.aAccommodation),
         weight: 1,
         opacity: 1,
         color: 'white',
@@ -149,7 +149,7 @@ $('#ex1').slider({
     console.log(feature);
 
     //console.log(layer.feature.properties.rbLocation); 
-    $('#infoWindow').html(layer.feature.properties.rbLocation + '<br>' + '<h3>'+ layer.feature.properties.rbpercent + '%' + '<br>' + '</h3>' + '<br>'  + 'Median Monthly Rent: ' + '<br>' + '<h3>' +'$' +layer.feature.properties.monthlyrentmedianmonthlyrent + '</h3>'); 
+    $('#infoWindow').html(layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties.aAccommodation + '%' + '<br>' + '</h3>' + '<br>'  + 'Median Monthly Rent: ' + '<br>' + '<h3>' +'$' +layer.feature.properties.VALUE1 + '</h3>'); 
   }
 
   //this runs on mouseout
@@ -169,12 +169,10 @@ $('#ex1').slider({
   //all of the helper functions are defined and ready to go, so let's get some data and render it!
 
   //be sure to specify style and onEachFeature options when calling L.geoJson().
-  $.getJSON('data/rent.geojson', function(state_data) {
+  $.getJSON('data/risk.geojson', function(state_data) {
+    console.log(state_data);
     geojson = L.geoJson(state_data,{
       style: style,
       onEachFeature: onEachFeature
     }).addTo(map3);
   });
-
- 
-
