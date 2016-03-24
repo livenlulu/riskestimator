@@ -107,7 +107,7 @@ $('#ex1').slider({
 
   legend.addTo(map3);
 
-  var mapColorType = "aUtilities";
+  var mapColorType = "afield_5";
   //this function returns a style object, but dynamically sets fillColor based on the data
   function style(feature) {
     // console.log(feature.properties[mapColorType]);
@@ -182,7 +182,7 @@ $('#ex1').slider({
   //all of the helper functions are defined and ready to go, so let's get some data and render it!
 
   //be sure to specify style and onEachFeature options when calling L.geoJson().
-  $.getJSON('data/risk.geojson', function(state_data) {
+  $.getJSON('data/riskmeasure.geojson', function(state_data) {
     console.log(state_data);
     geojson = L.geoJson(state_data,{
       style: style, 

@@ -89,30 +89,29 @@ $('#ex1').slider({
                         '#72BF21';
   }
 
-  var legend = L.control({position: 'bottomright'});
-  legend.onAdd = function (map) {
+var bustype = 'aUtilities';
 
-      var div = L.DomUtil.create('div', 'info legend'),
-          grades = [0, 25, 35, 45, 50],
-          labels = [];
+$("#aAccommodation").click(function(){
+  bustype = ''
+});
 
-      // loop through our density intervals and generate a label with a colored square for each interval
-      for (var i = 0; i < grades.length; i++) {
-          div.innerHTML +=
-              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-              grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '%' + '<br>' : '+');
-      }
-      return div;
-  };
 
-  legend.addTo(map3);
 
-  var mapColorType = "aUtilities";
+  // function changeType(){
+  //   var type = $('#dropDown :selected').val();
+  //   // console.log("type" + type); 
+  //   if(mapColorType != type) {
+  //     mapColorType = type;
+       
+  //   }
+  // }
+
+  
   //this function returns a style object, but dynamically sets fillColor based on the data
   function style(feature) {
     // console.log(feature.properties[mapColorType]);
     return {
-        fillColor: getColor(feature.properties[mapColorType]),
+        fillColor: getColor(feature.properties[bustype]),
         weight: 1,
         opacity: 1,
         color: 'white',
@@ -121,14 +120,7 @@ $('#ex1').slider({
     };
   }
 
-  function changeType(){
-    var type = $('#dropDown :selected').val();
-    // console.log("type" + type); 
-    if(mapColorType != type) {
-      mapColorType = type;
-       
-    }
-  }
+
   //this function is set to run when a user mouses over any polygon
   function mouseoverFunction(e) {
     var layer = e.target;
@@ -151,9 +143,6 @@ $('#ex1').slider({
 
     //console.log(layer.feature.properties.rbLocation); 
     $('#infoWindow').html(layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties[mapColorType] + '%' + '<br>' + '</h3>' + '<br>'  + 'Zipcode: ' + '<br>' + '<h3>' +layer.feature.properties.VALUE1 + '</h3>'); 
-
-  
-
   }
 
   //this runs on mouseout
@@ -163,8 +152,8 @@ $('#ex1').slider({
 
   //this is executed once for each feature in the data, and adds listeners
   function onEachFeature(feature, layer) {
-    var cattype = $('#dropDown :selected').val();
-    top5arr.push(feature.properties[mapColorType]);
+    //var cattype = $('#dropDown :selected').val();
+    //top5arr.push(feature.properties[mapColorType]);
     //console.log(feature.properties[cattype])  
     layer.on({
         mouseover: mouseoverFunction,
@@ -184,4 +173,25 @@ $('#ex1').slider({
     }).addTo(map3);
   });
 
+
+
+//legend
+  var legend = L.control({position: 'bottomright'});
+  legend.onAdd = function (map) {
+
+      var div = L.DomUtil.create('div', 'info legend'),
+          grades = [0, 25, 35, 45, 50],
+          labels = [];
+
+      // loop through our density intervals and generate a label with a colored square for each interval
+      for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+              grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '%' + '<br>' : '+');
+      }
+      return div;
+  };
+
+  legend.addTo(map3);
+//close legend
 
