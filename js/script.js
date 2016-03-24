@@ -126,7 +126,13 @@ $('#ex1').slider({
     // console.log("type" + type); 
     if(mapColorType != type) {
       mapColorType = type;
-       
+        $.getJSON('data/risk.geojson', function(state_data) {
+          console.log(state_data);
+          geojson = L.geoJson(state_data,{
+            style: style, 
+            onEachFeature: onEachFeature
+          }).addTo(map3);
+        });
     }
   }
   //this function is set to run when a user mouses over any polygon
@@ -150,7 +156,7 @@ $('#ex1').slider({
     console.log(feature);
 
     //console.log(layer.feature.properties.rbLocation); 
-    $('#infoWindow').html(layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties[mapColorType] + '%' + '<br>' + '</h3>' + '<br>'  + 'Zipcode: ' + '<br>' + '<h3>' +layer.feature.properties.VALUE1 + '</h3>'); 
+    $('#infoWindow').html(top5arr.sort().slice(0,4) +'<br>' + layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties[mapColorType] + '%' + '<br>' + '</h3>' + '<br>'  + 'Zipcode: ' + '<br>' + '<h3>' +layer.feature.properties.VALUE1 + '</h3>'); 
 
   
 
