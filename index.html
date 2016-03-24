@@ -37,8 +37,6 @@
 
 <body>
 
-
-
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,11 +53,7 @@
       <div class="nav navbar-nav navbar-right">
     <!--   <button type="button" class="btn btn-default navbar-btn"><div  class="myButton" id="one">Manhattan</div></button> -->
   
-<!--         <li><a id="one" class="myButton" href="#">Manhattan</a></li>
-        <li><a id="two" class="myButton">Brooklyn</a></li>
-        <li><a id="three" class="myButton">Bronx</a></li>
-        <li><a id="four" class="myButton">Queens</a></li>
-        <li><a id="five" class="myButton">Staten Island</a></li>
+<!--         
  -->
         <li><a onclick="Apprise('Identify locations that match multiple criteria. Coming Soon...');">Run Analysis</a></li>
         
@@ -93,35 +87,37 @@
       <form role="search">
 
        <div class="dropdown">
-        <h5>Business Type</h5>
-        <select class="form-control" style="width:290px">
-          <option id="afs" class="dropBox" value="Accommodation and food services">Accommodation and food services</option>
-          <option value="Administrative and support and waste management and remediation services">Administrative and support and waste management and remediation services</option>
-          <option value="Arts, entertainment, and recreation">Arts, entertainment, and recreation</option>
-          <option value="Educational services">Educational services</option>
-          <option value="Construction">Construction</option>
-          <option value="Finance and insurance">Finance and insurance</option>
-          <option value="Health care and social assistance">Health care and social assistance</option>
-          
-          <option value="Information">Information</option>
-          <option value="Management of companies and enterprises">Management of companies and enterprises</option>
-          <option value="Manufacturing">Manufacturing</option>
-          <option value="Mining">Mining</option>
-          <option value="Industries not classified">Others</option>
-          <option value="Other services (except public administration)">Other services (except public administration)</option>
-          <option value="Professional, scientific, and technical services">Professional, scientific, and technical services</option>
-          <option value="Real estate and rental and leasing">Real estate and rental and leasing</option>
-          <option value="Retail trade">Retail trade</option>
-          <option value="Transportation and warehousing">Transportation and warehousing</option>
-          <option value="Utilities">Utilities</option>
-          <option value="Wholesale trade">Wholesale trade</option>
+        <h5>I want to start a </h5>
+        <select class="form-control" id="dropDown" style="width:290px" onchange="changeType()">
+          <option value="aUtilities">Any</option>
+          <option value="aAccommodation">Accommodation and food services</option>
+          <option value="aAdministrative">Administrative and support and waste management and remediation services</option>
+          <option value="aAgriculture">Agriculture, forestry, fishing and hunting</option>
+          <option value="aArts">Arts, entertainment, and recreation</option>
+          <option value="aConstruction">Construction</option>
+          <option value="aEducational">Educational services</option>
+          <option value="aFinance">Finance and insurance</option>
+          <option value="aHealth">Health care and social assistance</option>
+          <option value="aInformation">Information</option>
+          <option value="aManagement">Management of companies and enterprises</option>
+          <option value="aManufacturing">Manufacturing</option>
+          <option value="aMining">Mining</option>
+          <option value="aIndustries">Others</option>
+          <option value="aOther">Other services (except public administration)</option>
+          <option value="aProfessional">Professional, scientific, and technical services</option>
+          <option value="aReal">Real estate and rental and leasing</option>
+          <option value="aRetail">Retail trade</option>
+          <option value="aTotal">Total for all sectors</option>
+          <option value="aTransportation">Transportation and warehousing</option>
+          <option value="aUtilities">Utilities</option>
+          <option value="aWholesale">Wholesale trade</option>
         </select>
       </div>
 
         <div class="dropdown">
         <h5>Expected Rent</h5>
 
-          <font face= "Dosis">Low &nbsp;<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/> &nbsp;High </font>
+          <font face= "Dosis">Low &nbsp;<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/> &nbsp;High </font>
         </div>
           <br><br><br><br>
 
@@ -129,16 +125,21 @@
         <h5>Location</h5>
         <select class="form-control" style="width:290px">
           <option value="Any">Any</option>
-          <option value="Manhattan">Manhattan</option>
-          <option value="Brooklyn">Brooklyn</option>
-          <option value="Bronx">Bronx</option>
-          <option value="Queens">Queens</option>
-          <option value="Staten Island">Staten Island</option>
+          <option id="one" class="myButton"  value="Manhattan">Manhattan</option>
+          <option id="two" class="myButton" value="Brooklyn">Brooklyn</option>
+          <option id="three" class="myButton" value="Bronx">Bronx</option>
+          <option id="four" class="myButton" value="Queens">Queens</option>
+          <option id="five" class="myButton" value="Staten Island">Staten Island</option>
         </select>
       </div>
 
-
-
+<!-- 
+        <li><a id="one" class="myButton" href="#">Manhattan</a></li>
+        <li><a id="two" class="myButton">Brooklyn</a></li>
+        <li><a id="three" class="myButton">Bronx</a></li>
+        <li><a id="four" class="myButton">Queens</a></li>
+        <li><a id="five" class="myButton">Staten Island</a></li>
+ -->
 
         <br><br><br>
           <button type="submit" class="btn btn-default">Search</button>
