@@ -107,7 +107,7 @@ $('#ex1').slider({
 
   legend.addTo(map3);
 
-  var mapColorType = "afield_5";
+  var mapColorType = "aAccommodation";
   //this function returns a style object, but dynamically sets fillColor based on the data
   function style(feature) {
     // console.log(feature.properties[mapColorType]);

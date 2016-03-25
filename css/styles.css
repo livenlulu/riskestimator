@@ -1,8 +1,8 @@
     
     html, body {
-    width: 95%;
+    width: 100%;
     background: white;
-    margin: auto;
+  
     }
 
     
@@ -72,7 +72,7 @@
 
     .map {
       width: 100%;
-      height: 550px;
+      height: 630px;
       background-color: #f5f5f3;
     }
 
@@ -115,6 +115,8 @@
       font-family: 'Oswald';
       border-bottom: 2px solid #000;
       border-color: #fff;
+      nackground-color: black;
+
     }
     .navbar-default:visited {
       margin-bottom: 0px;
@@ -181,7 +183,7 @@
       top: 10px;
       width: auto;
       display: inline;
-      margin-left: 10px;
+      margin-left: 0px;
       float: left;
       font-family: 'Dosis', sans-serif;
     }
