@@ -156,7 +156,7 @@ $('#ex1').slider({
     console.log(feature);
 
     //console.log(layer.feature.properties.rbLocation); 
-    $('#infoWindow').html(top5arr.sort().slice(0,4) +'<br>' + layer.feature.properties.aNeighborhood + '<br>' + '<h3>'+ layer.feature.properties[mapColorType] + '%' + '<br>' + '</h3>' + '<br>'  + 'Zipcode: ' + '<br>' + '<h3>' +layer.feature.properties.VALUE1 + '</h3>'); 
+    $('#infoWindow').html('<br>' + layer.feature.properties.aNeighborhood + '<h3>'+ layer.feature.properties[mapColorType] + '%' + '<br>' + '</h3>' + '<br>'  + 'Zipcode: ' + '<br>' + '<h3>' +layer.feature.properties.VALUE1 + '</h3>'); 
 
   
 
