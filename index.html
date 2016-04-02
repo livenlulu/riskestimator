@@ -4,17 +4,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Small Business Closure Risk New York City Map</title>
+  <title>Small Business Closure Risk Predictor New York City Map</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height" />
 
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  
-  <![endif]-->
   <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:700' rel='stylesheet' type='text/css'>
 
   <link href='https://fonts.googleapis.com/css?family=Dosis:300,600' rel='stylesheet' type='text/css'>
@@ -44,173 +39,114 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
       </button>
-      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><b> &nbsp;Risk Estimator</b></a>
+      <a class="navbar-brand" href="http://livenlulu.github.io/riskestimator/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><b> &nbsp;Small Business Closure Risk Predictor</b></a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-   <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+    <div class="nav navbar-nav navbar-right">
+       <li><a onclick="Apprise('How did we measure risk?');">Analysis</a></li>
+    </div>
 
-      <div class="nav navbar-nav navbar-right">
-    <!--   <button type="button" class="btn btn-default navbar-btn"><div  class="myButton" id="one">Manhattan</div></button> -->
-  
-<!--         
- -->
-        <li><a onclick="Apprise('Identify locations that match multiple criteria. Coming Soon...');">Run Analysis</a></li>
-        
-        
-
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    
- 
-<!--   <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a onclick="Apprise('Identify locations that match multiple criteria.');">Run Analysis</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul> -->
+  </div> 
   </nav>
 
-
-  <div class="row" style="border-top: 2px solid black;">
-        <div class="col-xs-12 col-sm-8 col-md-9">
+<!-- 
+  <div class="row" style="border-top: 2px solid black;"> -->
+        <!-- <div class="col-xs-12 col-sm-8 col-md-9"> -->
           
-      <div id="map3" class="map"></div>
+    <div id="map3" class="map"></div>
 
-    </div>
+    <div class="sidebar mainSidebar" style="display:block;">
+     
+    <h2>New York City Small Business Greatest Opportunity</h2>
 
-   <div class="col-sm-2 col-md-3">
-    <br>
-   <h2>New York City Small Business Greatest Opportunity</h2>
-
-      <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">Map</button>
-        <button type="button" class="btn btn-default">List</button>
-        
-      </div>
-      <br><br>
-
-       <div class="dropdown">
+      <div class="dropdown">
         <h5>I want to start a </h5>
-        <select class="form-control" id="dropDown" style="width:230px" onchange="changeType()">
-          <option value="afield_5">Any</option>
-          <option value="aAccommodation">Accommodation and food services</option>
-          <option value="aAdministrative">Administrative and support and waste management and remediation services</option>
-          <option value="aAgriculture">Agriculture, forestry, fishing and hunting</option>
-          <option value="aArts">Arts, entertainment, and recreation</option>
-          <option value="aConstruction">Construction</option>
-          <option value="aEducational">Educational services</option>
-          <option value="aFinance">Finance and insurance</option>
-          <option value="aHealth">Health care and social assistance</option>
-          <option value="aInformation">Information</option>
-          <option value="aManagement">Management of companies and enterprises</option>
-          <option value="aManufacturing">Manufacturing</option>
-          <option value="aMining">Mining</option>
-          <option value="aIndustries">Others</option>
-          <option value="aOther">Other services (except public administration)</option>
-          <option value="aProfessional">Professional, scientific, and technical services</option>
-          <option value="aReal">Real estate and rental and leasing</option>
-          <option value="aRetail">Retail trade</option>
-          <option value="afield_5">Total for all sectors</option>
-          <option value="aTransportation">Transportation and warehousing</option>
-          <option value="aUtilities">Utilities</option>
-          <option value="aWholesale">Wholesale trade</option>
-        </select>
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Type of Business &nbsp;
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+          <li><a id="aAccommodation" href="#">Accommodation and food services</a></li>
+          <li><a id="aAdministrative" href="#">Administrative services</a></li>
+          <li><a id="aAgriculture" href="#">Agriculture, forestry, fishing and hunting</a></li>
+          <li><a id="aArts" href="#">Arts, entertainment, and recreation</a></li>
+          <li><a id="aConstruction" href="#">Construction</a></li>
+          <li><a id="aEducational" href="#">Educational services</a></li>
+          <li><a id="aFinance" href="#">Finance and insurance</a></li>
+          <li><a id="aHealth" href="#">Health care and social assistance</a></li>
+          <li><a id="aInformation" href="#">Information</a></li>
+          <li><a id="aManagement" href="#">Management of companies and enterprises</a></li>
+          <li><a id="aManufacturing" href="#">Manufacturing</a></li>
+          <li><a id="aMining" href="#">Mining</a></li>
+          <li><a id="aIndustries" href="#">Others</a></li>
+          <li><a id="aOther" href="#">Other services (except public administration)</a></li>
+          <li><a id="aProfessional" href="#">Professional, scientific, and technical services</a></li>
+          <li><a id="aReal" href="#">Real estate and rental and leasing</a></li>
+          <li><a id="aRetail" href="#">Retail trade</a></li>
+          <li><a id="aTransportation" href="#">Transportation and warehousing</a></li>
+          <li><a id="aUtilities" href="#">Utilities</a></li>
+          <li><a id="aWholesale" href="#">Wholesale trade</a></li>
+          <li><a id="afield_5" href="#">Any Type of Business</a></li>
+        </ul>
       </div>
 
-      <br><br><br><br><br>
-        <div class="dropdown">
+
+    <!--     <div class="dropdown">
         <h5>Expected Rent</h5>
 
           <font face= "Dosis">Low &nbsp;<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/> &nbsp;High </font>
-        </div>
-          <br><br><br><br>
-
-            <div class="dropdown">
+        </div> -->
+        
+      <div class="dropdown">
         <h5>Location</h5>
-        <select class="form-control" style="width:230px">
-          <option value="Any">Any</option>
-          <option id="one" class="myButton"  value="Manhattan">Manhattan</option>
-          <option id="two" class="myButton" value="Brooklyn">Brooklyn</option>
-          <option id="three" class="myButton" value="Bronx">Bronx</option>
-          <option id="four" class="myButton" value="Queens">Queens</option>
-          <option id="five" class="myButton" value="Staten Island">Staten Island</option>
-        </select>
-      </div>
-
-      </div>
-
-
-
-      
-
-
-      
-
-<!-- 
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Manhattan&nbsp;
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
         <li><a id="one" class="myButton" href="#">Manhattan</a></li>
         <li><a id="two" class="myButton">Brooklyn</a></li>
         <li><a id="three" class="myButton">Bronx</a></li>
         <li><a id="four" class="myButton">Queens</a></li>
         <li><a id="five" class="myButton">Staten Island</a></li>
- -->
+      </ul>
+    </div>
+    <div id="drop2"></div>
 
-        
-     
-        </form>
-      
-
-      </div>
-      
-    
-
-      
- <!--  <div class="col-xs-6 col-md-4">
-   
-      <div class="row">
-      
-            <div class="span">
-            <form id="custom-search-form" class="form-search form-horizontal pull-right">
-           
-                    <input type="text" class="search-query mac-style" placeholder="Search">
-                    <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
-         
-            </form>
-            </div>
-      </div>
- 
-  </div>
- -->
-
-   
-<br>
-
-
-    <!-- <div class="row" style="background: #f5f5f3; border-top: 2px solid black;">
-      <div id="bg"> -->
-        
-
-
-    <h5>Source: U.S. Census Bureau, American Community Survey 1-Year Estimates, 2008, 2013 American FactFinder 2016 © Risk Estimator</h5>
+    <div class="dropdown" id="side">
+        <h4>New York City</h4>
+         <h3>28.6%</h3>
+          <br>
+        <h4>Zipcode:</h4>
+         <h3>Hover over map</h3>
+    </div>
   
-<div id="infoWindow"><br>
-              New York City
-              <h3>28.6%</h3>
-              <br>
-              Zipcode:
-              <h3>Hover over map</h3>
-            </div>
+  </div>
+   
 
-<!-- <div class="popup-bg"></div>
-<div class="welcome-options" style="display:block;">
-  <div class="inner-container generic-background">...</div>
-</div> -->
+    <center><h5>Source: U.S. Census Bureau, American Community Survey 1-Year Estimates, 2008, 2013 American FactFinder 2016 © Risk Estimator</h5></center> -->
+  
+    <div class="infoWindow" style="display:block;"><br>
+      <ul>
+        <li id="tit">Small Business Patterns Data in New York 2015</li><br>
+        <br><br><li class="min">Less Risk</li><li class="max">High Risk</li>
+    <br><br>
+        <center><li class="legendGradient heatMapBar pvs"></li></center>
+
+        <li><h5>Note: ZipCode Business Patterns Data used as an indicator of business closures, along with other socio-economical data. See Analysis.</h5></li>
+    
+      </ul>
+    </div>
+
+
   
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
-  <script type="text/javascript" src="jquery.min.js"></script>
+<!--   // <script type="text/javascript" src="jquery.min.js"></script> -->
   <script type="text/javascript" src="data/apprise-v2.js"></script>
 
 
