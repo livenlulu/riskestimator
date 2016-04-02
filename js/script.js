@@ -106,6 +106,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
   //     }
   //     return div;
   // };
+
   // legend.addTo(map3);
 
   // var risklevel = layer.feature.properties[bizType]
@@ -113,9 +114,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
   // $("#aHigh").mouseover(function(){
   // highrisk = risklevel > 50;
 
-  $('#side').html('<h4>' + layer.feature.properties.aNeighborhood + '</h4>' + '<h3>'+ layer.feature.properties[bizType] + '%' + '<br>' + '</h3>' + '<br>' + '<h4>' + 'Zipcode: ' + '</h4>' + '<h3>' + layer.feature.properties.VALUE1 + '</h3>'); 
 
-  }
 
 
 
@@ -280,6 +279,11 @@ $(".dropdown-menu li a").click(function(){
     // console.log(feature);
 
     //console.log(layer.feature.properties.rbLocation); 
+    $('#side').html('<h4>' + layer.feature.properties.aNeighborhood + '</h4>' + '<h3>'+ layer.feature.properties[bizType] + '%' + '<br>' + '</h3>' + '<br>' + '<h4>' + 'Zipcode: ' + '</h4>' + '<h3>' + layer.feature.properties.VALUE1 + '</h3>'); 
+
+  
+
+  }
 
   //this runs on mouseout
   function resetHighlight(e) {
