@@ -116,8 +116,6 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
 
 
-
-
   var bizType = "afield_5";
   //this function returns a style object, but dynamically sets fillColor based on the data
   
@@ -279,10 +277,10 @@ $(".dropdown-menu li a").click(function(){
     // console.log(feature);
 
     //console.log(layer.feature.properties.rbLocation); 
-    $('#side').html('<h4>' + layer.feature.properties.aNeighborhood + '</h4>' + '<h3>'+ layer.feature.properties[bizType] + '%' + '<br>' + '</h3>' + '<br>' + '<h4>' + 'Zipcode: ' + '</h4>' + '<h3>' + layer.feature.properties.VALUE1 + '</h3>'); 
 
-  
+    // var roundup = math.round(layer.feature.properties[bizType])
 
+    $('#side').html('<h4>' + layer.feature.properties.aNeighborhood + '</h4>' + '<h3>'+ layer.feature.properties[bizType] + '% Risk' + '<br>' + '</h3>' + '<br>' + '<h4>' + 'Zipcode' + '</h4>' + '<h3>' + layer.feature.properties.VALUE1 + '</h3>'); 
   }
 
   //this runs on mouseout

@@ -39,11 +39,11 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
       </button>
-      <a class="navbar-brand" href="http://livenlulu.github.io/riskestimator/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><b> &nbsp;Small Business Closure Risk Predictor</b></a>
+      <a class="navbar-brand" href="http://livenlulu.github.io/riskestimator/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><b> &nbsp;Small Business Closure Risk Prediction Map</b></a>
     </div>
 
     <div class="nav navbar-nav navbar-right">
-       <li><a onclick="Apprise('How did we measure risk?');">Analysis</a></li>
+       <li><a onclick="Apprise('<b><h3>How Did We Calculate the Risk Measurement?</b></h3><br><b>Dependent variable: </b>Number of small businesses with < 50 employees closed down<br><b>Independent variables: </b>Rent growth, unemployment, median income, real estate price, population<br><br><b>Regression Model: </b>Step backwards feature selection method. </b><b>R<sup>2 </sup>Value: </b>79% accuracy<br>Based on the model, we predicted the growth measure for each of the business sectors using years 1998 - 2013. <br><br><h5>Sources: ZipCode Business Patterns 1998 - 2013, Zillow Data 2006, 2013, U.S. Census Bureau 2010 - 2015</h5><br>');">Analysis</a></li>
     </div>
 
   </div> 
@@ -113,12 +113,13 @@
       </ul>
     </div>
     <div id="drop2"></div>
+    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detailed data.</div>
 
     <div class="dropdown" id="side">
         <h4>New York City</h4>
-         <h3>28.6%</h3>
+         <h3>28.63% Risk</h3>
           <br>
-        <h4>Zipcode:</h4>
+        <h4>Zipcode</h4>
          <h3>Hover over map</h3>
     </div>
   
@@ -129,12 +130,14 @@
   
     <div class="infoWindow" style="display:block;"><br>
       <ul>
-        <li id="tit">Small Business Patterns Data in New York City 2015</li><br>
+        <li id="tit">Minimizing Opening Small Business Storefront Risk in New York City</li><br>
         <br><br><li class="min">Less Risk</li><li class="max">High Risk</li>
     <br><br>
         <center><li class="legendGradient heatMapBar pvs"></li></center>
 
-        <li><h5>Note: ZipCode Business Patterns Data used as an indicator of business closures, along with other socio-economical data. See Analysis.</h5></li>
+        <li><h5>Note: ZipCode Business Patterns 2013 Data used as an indicator of business closures, along with other socio-economical data. See Analysis.<br><br>Comments or Suggestions: Contact <a href="http://www.lucykang.com">Lucy</a></h5></li>
+
+
     
       </ul>
     </div>
