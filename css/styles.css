@@ -25,9 +25,21 @@
     }
 
     h3 {
-      line-height: 1px;
+      line-height: 23px;
       font-weight: 300;
       font-size:18px;
+      padding-left: 8%;
+      margin-top:10px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+      line-height: 23px;
+      font-weight: 300;
+      font-size:18px;
+      padding-left: 0%;
+      margin-top:10px;
+      font-family: 'Roboto', sans-serif;
     }
 
     h4 {
@@ -46,6 +58,7 @@
       text-decoration: lowercase;
       font-family: 'Roboto', sans-serif;
       float: left;
+      
     }
     .infoWindow h5 {
       /*text-transform: capitalize;*/
@@ -64,9 +77,9 @@
       font-family: 'Roboto', sans-serif;
       font-size: 10px;
       font-weight: 400;
-      position: relative;
+      position: absolute;
       height: 195px;
-      top: -570px;
+      top: 100px;
       width: 300px;
       margin-left: 50px;
       text-align: center;
@@ -134,7 +147,7 @@
     .dropdown-menu {
       font-family: 'Roboto';
       font-size:12px;
-      margin-left: 18px;
+      
     }
 
     .scrollable-menu {
@@ -237,6 +250,12 @@
   
       font-color: #fff;
     }
+
+    .myButton {
+      margin: 3px;
+      padding: 8px;
+      line-height: 15px;
+    }
     
 
 /*    a#four.myButton:active, a#four.myButton:hover, a#four.myButton:visited, a#four.myButton:link{
@@ -283,14 +302,12 @@
     .dropdown {
       padding-left: 5%;
       float: left;
-      padding-top: 10px;
+      margin-top: 10px;
+      margin-bottom:20px;
 
     }
 
-    #drop2 {
-      border-bottom: 1px dashed #000;
-      padding-bottom: 180px;
-    }
+
     .form-control {
       font-family: 'roboto', sans-serif;
       font-weight: 400;
