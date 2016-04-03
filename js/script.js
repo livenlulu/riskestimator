@@ -280,7 +280,10 @@ $(".dropdown-menu li a").click(function(){
 
     // var roundup = math.round(layer.feature.properties[bizType])
 
-    $('#side').html('<h4>' + layer.feature.properties.aNeighborhood + '</h4>' + '<h3>'+ layer.feature.properties[bizType] + '% Risk' + '<br>' + '</h3>' + '<br>' + '<h4>' + 'Zipcode' + '</h4>' + '<h3>' + layer.feature.properties.VALUE1 + '</h3>'); 
+    var round = parseFloat(layer.feature.properties[bizType]);
+    var round2 = Math.round(round)
+
+    $('#side').html('<h3><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span> Business in ' + '<b>' + layer.feature.properties.aNeighborhood + '</b>' + ' have a ' + '<b>'+ round2 + '% ' + '</b>' + ' risk factor of opening a storefront based on recent closures and demographics changes.'); 
   }
 
   //this runs on mouseout

@@ -43,7 +43,7 @@
     </div>
 
     <div class="nav navbar-nav navbar-right">
-       <li><a onclick="Apprise('<b><h3>How the Risk Measurement was Calculated</b></h3><br><b>Dependent variable: </b>Number of small businesses with < 50 employees closed down<br><b>Independent variables: </b>Rent growth, unemployment, median income, real estate price, population<br><br><b>Regression Model: </b>Step backwards feature selection method. </b><b>R<sup>2 </sup>Value: </b>79% accuracy<br>Based on the model, we predicted the growth measure for each of the business sectors using years 1998 - 2013. <br><br><h5>Sources: ZipCode Business Patterns 1998 - 2013, Zillow Data 2006, 2013, U.S. Census Bureau 2010 - 2015</h5><br>');">Analysis</a></li>
+       <li><a onclick="Apprise('<b><h1>How the Risk Measurement was Calculated</b></h1><br><b>Dependent variable: </b>Number of small businesses with < 50 employees closed down<br><b>Independent variables: </b>Rent growth, unemployment, median income, real estate price, population<br><br><b>Regression Model: </b>Step backwards feature selection method. </b><b>R<sup>2 </sup>Value: </b>79% accuracy<br>Based on the model, we predicted the growth measure for each of the business sectors using years 1998 - 2013. <br><br><h5>Sources: ZipCode Business Patterns 1998 - 2013, Zillow Data 2006, 2013, ACS, U.S. Census Bureau 2010 - 2015</h5><br>');">Analysis</a></li>
     </div>
 
   </div> 
@@ -58,11 +58,12 @@
     <div class="sidebar mainSidebar" style="display:block;">
      
     <h2>New York City Small Business Greatest Opportunity</h2>
+    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detailed data.</div>
 
       <div class="dropdown">
-        <h5>I want to start a </h5>
+        
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Type of Business &nbsp;
+          Choose Type of Business &nbsp;
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -90,6 +91,24 @@
           <li><a id="afield_5" href="#">Any Type of Business</a></li>
         </ul>
       </div>
+        <br>
+
+      <div id="side">
+        <h3><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>&nbsp;Business in <b>New York City</b> have a <b>38%</b> risk factor of opening a storefront based on recent closures and demographics changes.<h3>
+      </div>
+        
+        <br>
+      <div class="btn-group" role="group" aria-label="...">
+          <button type="button" id="one" class="myButton">Manhattan</button>
+          <button type="button" id="two" class="myButton">Brooklyn</button>
+          <button type="button" id="three" class="myButton">Bronx</button><br>
+          <button type="button" id="four" class="myButton">Queens</button>
+          <button type="button" id="five" class="myButton">Staten Island</button>
+      </div>
+
+    </div>
+
+
 
 
     <!--     <div class="dropdown">
@@ -97,8 +116,10 @@
 
           <font face= "Dosis">Low &nbsp;<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/> &nbsp;High </font>
         </div> -->
+
         
-      <div class="dropdown">
+        
+<!--       <div class="dropdown">
         <h5>Location</h5>
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Manhattan&nbsp;
@@ -111,23 +132,11 @@
         <li><a id="four" class="myButton">Queens</a></li>
         <li><a id="five" class="myButton">Staten Island</a></li>
       </ul>
-    </div>
-    <div id="drop2"></div>
-    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detailed data.</div>
+    </div> -->
 
-    <div class="dropdown" id="side">
-        <h4>New York City</h4>
-         <h3>28.63% Risk</h3>
-          <br>
-        <h4>Zipcode</h4>
-         <h3>Hover over map</h3>
-    </div>
-  
-  </div>
+    
+
    
-<!-- 
-    <center><h5>Source: U.S. Census Bureau, American Community Survey 1-Year Estimates, 2008, 2013 American FactFinder 2016 © Risk Estimator</h5></center> -->
-  
     <div class="infoWindow" style="display:block;"><br>
       <ul>
         <li id="tit">Minimizing Opening Small Business Storefront Risk in New York City</li><br>
