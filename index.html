@@ -7,24 +7,17 @@
   <title>Small Business Closure Risk Predictor New York City Map</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height" />
 
   <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:700' rel='stylesheet' type='text/css'>
-
   <link href='https://fonts.googleapis.com/css?family=Dosis:300,600' rel='stylesheet' type='text/css'>
-
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
   <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css" />
-
-  
-
+  <!--   for slider
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css" /> -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/journal/bootstrap.min.css" rel="stylesheet" integrity="sha384-r/qnS4YZBLuBSKeVc+sM4eUYUiJMFhkHfx1nwlErHhTd+NgeJlN/NiiTd6jbKJzm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="data/apprise-v2.css" type="text/css">
@@ -34,7 +27,6 @@
 
   <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -49,25 +41,25 @@
   </div> 
   </nav>
 
-<!-- 
+  <!-- old grid layout
   <div class="row" style="border-top: 2px solid black;"> -->
         <!-- <div class="col-xs-12 col-sm-8 col-md-9"> -->
           
-    <div id="map3" class="map"></div>
+  <div id="map3" class="map"></div>
 
-    <div class="sidebar mainSidebar" style="display:block;">
-     
+  <div class="sidebar mainSidebar" style="display:block;">
     <h2>New York City Small Business Greatest Opportunity</h2>
-    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detailed data.</div>
 
-      <div class="dropdown">
-        
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detailed data.
+    </div>
+
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Choose Type of Business &nbsp;
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
-
+      <span class="caret"></span>
+      </button>
+        
+      <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
           <li><a id="aAccommodation" href="#">Accommodation and food services</a></li>
           <li><a id="aAdministrative" href="#">Administrative services</a></li>
           <li><a id="aAgriculture" href="#">Agriculture, forestry, fishing and hunting</a></li>
@@ -89,78 +81,49 @@
           <li><a id="aUtilities" href="#">Utilities</a></li>
           <li><a id="aWholesale" href="#">Wholesale trade</a></li>
           <li><a id="afield_5" href="#">Any Type of Business</a></li>
-        </ul>
-      </div>
-        <br>
+      </ul>
+    </div><br>
 
-      <div id="side">
-        <h3><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>&nbsp;Business in <b>New York City</b> have a <b>38%</b> risk factor of opening a storefront based on recent closures and demographics changes.<h3>
-      </div>
-        
-        <br>
-      <div class="btn-group" role="group" aria-label="...">
+    <div id="side">
+          <h3><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>&nbsp;Business in <b>New York City</b> have a <b>38%</b> risk factor of opening a storefront based on recent closures and demographics changes.<h3>
+    </div><br>
+    
+    <div class="btn-group" role="group" aria-label="...">
           <button type="button" id="one" class="myButton">Manhattan</button>
           <button type="button" id="two" class="myButton">Brooklyn</button>
           <button type="button" id="three" class="myButton">Bronx</button><br>
           <button type="button" id="four" class="myButton">Queens</button>
           <button type="button" id="five" class="myButton">Staten Island</button>
-      </div>
-
     </div>
 
+  </div>
 
-
-
-    <!--     <div class="dropdown">
+  <!-- for slider
+        <div class="dropdown">
         <h5>Expected Rent</h5>
 
-          <font face= "Dosis">Low &nbsp;<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/> &nbsp;High </font>
+        <font face= "Dosis">Low &nbsp;<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/> &nbsp;High </font>
         </div> -->
 
-        
-        
-<!--       <div class="dropdown">
-        <h5>Location</h5>
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Manhattan&nbsp;
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li><a id="one" class="myButton" href="#">Manhattan</a></li>
-        <li><a id="two" class="myButton">Brooklyn</a></li>
-        <li><a id="three" class="myButton">Bronx</a></li>
-        <li><a id="four" class="myButton">Queens</a></li>
-        <li><a id="five" class="myButton">Staten Island</a></li>
-      </ul>
-    </div> -->
+  <div class="infoWindow" style="display:block;"><br>
+    <ul>
+      <li id="tit">Minimizing Opening Small Business Storefront Risk in New York City</li><br><br><br>
+      <li class="min">Less Risk</li>
+      <li class="max">High Risk</li><br><br>
+      <center>
+      <li class="legendGradient heatMapBar pvs"></li>
+      </center>
+      <li><h5>Note: ZipCode Business Patterns 2013 Data used as an indicator of business closures, along with other socio-economical data. See Analysis.<br><br>Comments or Suggestions: Contact <a href="http://www.lucykang.com">Lucy</a></h5></li>
+    </ul>
+  </div>
 
-    
-
-   
-    <div class="infoWindow" style="display:block;"><br>
-      <ul>
-        <li id="tit">Minimizing Opening Small Business Storefront Risk in New York City</li><br>
-        <br><br><li class="min">Less Risk</li><li class="max">High Risk</li>
-    <br><br>
-        <center><li class="legendGradient heatMapBar pvs"></li></center>
-
-        <li><h5>Note: ZipCode Business Patterns 2013 Data used as an indicator of business closures, along with other socio-economical data. See Analysis.<br><br>Comments or Suggestions: Contact <a href="http://www.lucykang.com">Lucy</a></h5></li>
-
-
-    
-      </ul>
-    </div>
-
-
-  
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
-<!--   // <script type="text/javascript" src="jquery.min.js"></script> -->
+  <script type="text/javascript" src="jquery.min.js"></script>
   <script type="text/javascript" src="data/apprise-v2.js"></script>
-
 
 </body>
 </html>

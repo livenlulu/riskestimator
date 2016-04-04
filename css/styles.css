@@ -1,19 +1,18 @@
-    
     html, body {
-    width: 100%;
-    background: white;
-    height:100%;
-    font-family: 'Dosis', sans-serif;
-    font-size: 14px;
+      width: 100%;
+      background: white;
+      height:100%;
+      font-family: 'Dosis', sans-serif;
+      font-size: 14px;
     }
 
-    
-    h6 {
-      font-size: 20px;
-      padding-left: 10%;
-      font-weight:600;
-      font-family: 'Dosis', sans-serif;
-
+    h1 {
+      line-height: 23px;
+      font-weight: 300;
+      font-size:18px;
+      padding-left: 0%;
+      margin-top:10px;
+      font-family: 'Roboto', sans-serif;
     }
 
     h2 {
@@ -29,15 +28,6 @@
       font-weight: 300;
       font-size:18px;
       padding-left: 8%;
-      margin-top:10px;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    h1 {
-      line-height: 23px;
-      font-weight: 300;
-      font-size:18px;
-      padding-left: 0%;
       margin-top:10px;
       font-family: 'Roboto', sans-serif;
     }
@@ -58,15 +48,17 @@
       text-decoration: lowercase;
       font-family: 'Roboto', sans-serif;
       float: left;
-      
     }
-    .infoWindow h5 {
-      /*text-transform: capitalize;*/
-      text-align: left;
-      padding-top: 8px;
-      color: #222;
-      font-weight: 300;
-      font-size: 11px;
+
+    h6 {
+      font-size: 20px;
+      padding-left: 10%;
+      font-weight:600;
+      font-family: 'Dosis', sans-serif;
+    }
+
+    li:visited {
+      background-color: white;
     }
 
     .infoWindow {
@@ -85,17 +77,16 @@
       text-align: center;
       color: #000;
       padding-top:0px;
-      
       display: block;
       /*border-style: solid;*/
       opacity: 0.9;
     }  
+
     .infoWindow li.min {
       float: left;
       /*margin: 0 0 5px;*/
       margin-top: 27px;
       text-transform: uppercase;
-
     }
 
     .infoWindow li.max {
@@ -111,16 +102,18 @@
       -webkit-padding-end: 10px;
     }
 
+    .infoWindow h5 {
+      /*text-transform: capitalize;*/
+      text-align: left;
+      padding-top: 8px;
+      color: #222;
+      font-weight: 300;
+      font-size: 11px;
+    }
+
     .legendGradient {
       width:150px;
       padding-left: 10px;
-
-    }
-
-    #tit {
-      float: left;
-      font-size:15px;
-      text-transform: uppercase;
     }
 
     .heatMapBar {
@@ -135,19 +128,27 @@
       padding-top: 5px! important;
       padding-bottom: 5px! important;
     }
+
     .btn-group {
       padding-left: 5%;
      /* margin-bottom: 1%;*/
     }
 
-    li:visited {
-      background-color: white;
+    .dropdown {
+      padding-left: 5%;
+      float: left;
+      margin-top: 10px;
+      margin-bottom:20px;
+    }
+
+    .dropdown h4 {
+      padding-left: 0px;
+      line-height: 20px;
     }
 
     .dropdown-menu {
       font-family: 'Roboto';
-      font-size:12px;
-      
+      font-size:12px; 
     }
 
     .scrollable-menu {
@@ -180,31 +181,31 @@
     }
 
     .info {
-    padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 0px;
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 0px;
     }
 
     .info h4 {
-        margin: 0 0 5px;
-        color: #777;
+      margin: 0 0 5px;
+      color: #777;
     }
 
     .legend {
-    line-height: 18px;
-    color: #555;
+      line-height: 18px;
+      color: #555;
     }
 
     .legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.9;
-    background-color: white;
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.9;
+      background-color: white;
     }
 
     .navbar {
@@ -230,156 +231,19 @@
       margin-bottom: 0px;
       cursor: pointer;
     }
+
     .navbar-brand:hover {
       background-color: white;
     }
 
-    
-
-/*    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:visited {
-      background-color: black;
-
-    }*/
     .navbar-nav {
-  
       border-bottom-width: 2px;
       border-bottom: black;
-
     }
+
     .navbar-header {
-  
       font-color: #fff;
     }
-
-    .myButton {
-      margin: 3px;
-      padding: 8px;
-      line-height: 15px;
-    }
-    
-
-/*    a#four.myButton:active, a#four.myButton:hover, a#four.myButton:visited, a#four.myButton:link{
-      background-color: black;
-    }*/
-  
-
-    .legendGradient {
-    width: 150px;
-    }
-
-/*    .heatMapBar {
-      height: 6px;
-      background: -webkit-linear-gradient(left,#dc0023,#f74a27,#fbb100,#20c063);
-      border-radius: 30px;
-    }
-*/
-    .welcome-options .inner-container {
-    background: #EAEEF1;
-    padding: 50px;
-    display: inline-block;
-    box-shadow: 1px 7px 10px rgba(0,0,0,0.2);
-    }
-
-    .generic-background {
-    border: 1px solid #e6e6e6;
-    }
-
-
-    #left {
-      background: #f5f5f3;
-      padding: 10px;
-      border-radius: 10px;
-      font-size: 20px;
-      position: relative;
-      top: 10px;
-      width: auto;
-      display: inline;
-      margin-left: 0px;
-      float: left;
-      font-family: 'Dosis', sans-serif;
-    }
-
-    .dropdown {
-      padding-left: 5%;
-      float: left;
-      margin-top: 10px;
-      margin-bottom:20px;
-
-    }
-
-
-    .form-control {
-      font-family: 'roboto', sans-serif;
-      font-weight: 400;
-      font-size: 12px;
-      padding-left: 10px;
-
-    }
-
-/*    #bg {
-      background-color: #f5f5f3;
-    }
-
- 
-
-    #custom-search-form {
-        margin:0;
-        margin-top: 15px;
-        padding: 0;
-        font-family: 'Roboto';
-        font-weight: 300;
-        font-size: 14px;
-    }
- 
-    #custom-search-form .search-query {
-        padding-right: 3px;
-        padding-right: 4px \9;
-        padding-left: 3px;
-        padding-left: 4px \9;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
- 
-       /* margin-bottom: 0;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-        -webkit-transition: width  0.2s ease-in-out;
-    -moz-transition:width  0.2s ease-in-out;
-    -o-transition: width  0.2s ease-in-out;
-    transition: width  0.2s ease-in-out;
-    }
- 
-    #custom-search-form button {
-        border: 0;
-        background: none;
-        /** belows styles are working good */
-/*        padding: 2px 5px;
-        margin-top: 2px;
-        position: relative;
-        left: -28px;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
-/*        margin-bottom: 0;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-    }
- 
-    .search-query:focus + button {
-        z-index: 3;   
-    }   
-    .search-query:focus{
-        width: 200px;
-    }   
-
-    .form-group {
-      padding-top: 1px;
-      margin-left: 10px;
-      padding-left: 10px;
-    }*/
-
-/*    #ex1Slider .slider-selection {
-      background: #BABABA;
-    }*/
-
 
     .sidebar {
       padding: 20px;
@@ -395,8 +259,104 @@
       opacity: 0.9;
     }
 
-    .dropdown h4 {
-      padding-left: 0px;
-      line-height: 20px;
+    .myButton {
+      margin: 3px;
+      padding: 8px;
+      line-height: 15px;
     }
-    
+
+
+
+    .form-control {
+      font-family: 'roboto', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+/*  .welcome-options .inner-container {
+      background: #EAEEF1;
+      padding: 50px;
+      display: inline-block;
+      box-shadow: 1px 7px 10px rgba(0,0,0,0.2);
+    }
+
+    .generic-background {
+      border: 1px solid #e6e6e6;
+    }
+*/
+
+    #left {
+      background: #f5f5f3;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      top: 10px;
+      width: auto;
+      display: inline;
+      margin-left: 0px;
+      float: left;
+      font-family: 'Dosis', sans-serif;
+    }
+
+    #tit {
+      float: left;
+      font-size:15px;
+      text-transform: uppercase;
+    }
+
+  /*#custom-search-form {
+      margin:0;
+      margin-top: 15px;
+      padding: 0;
+      font-family: 'Roboto';
+      font-weight: 300;
+      font-size: 14px;
+    }
+ 
+    #custom-search-form .search-query {
+      padding-right: 3px;
+      padding-right: 4px \9;
+      padding-left: 3px;
+      padding-left: 4px \9;
+      margin-bottom: 0;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
+      -webkit-transition: width  0.2s ease-in-out;
+      -moz-transition:width  0.2s ease-in-out;
+      -o-transition: width  0.2s ease-in-out;
+      transition: width  0.2s ease-in-out;
+    }
+ 
+    #custom-search-form button {
+      border: 0;
+      background: none;
+      padding: 2px 5px;
+      margin-top: 2px;
+      position: relative;
+      left: -28px; 
+      margin-bottom: 0;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
+    }
+ 
+    .search-query:focus + button {
+      z-index: 3;   
+    }  
+
+    .search-query:focus{
+      width: 200px;
+    }   
+
+    .form-group {
+      padding-top: 1px;
+      margin-left: 10px;
+      padding-left: 10px;
+    }*/
+
+/*  #ex1Slider .slider-selection {
+      background: #BABABA;
+    }*/
