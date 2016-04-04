@@ -1,41 +1,21 @@
-  // var basemapUrl = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
-  // var attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
 var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
 
-  var manhattan = [40.748818,-73.874817];
-  var brooklyn = [40.637925,-73.948288];
-  var bronx = [40.841606, -73.874817];
-  var queens = [40.701464,-73.788300];
-  var statenisland = [40.576413,-74.104156];
+var manhattan = [40.748818,-73.874817];
+var brooklyn = [40.637925,-73.948288];
+var bronx = [40.841606, -73.874817];
+var queens = [40.701464,-73.788300];
+var statenisland = [40.576413,-74.104156];
  
 
-  var myZoom = 10;
-  //now the fun stuff:  leaflet!
-  var map3 = L.map('map3').setView( [40.729308,-73.871040], 11);
+var myZoom = 11;
+var map3 = L.map('map3').setView( [40.729308,-73.871040], myZoom);
     map3.addLayer(layer)
 
-   // //Let's add a marker
-  // var marker = L.marker([40.768058,-73.981891]).addTo(map);
-  // marker.bindPopup("<b>Hello world!</b><br>I am a popup.")
-  //Now let's use our custom-made array to make many markers
-
-
-  // $(".dropBox").select(function() {
-  //     if($(this).attr('id') == 'afs' ) {
-  //      map3.panTo(manhattan, panOptions);
-// With JQuery
-// $('#ex1').slider({
-//   formatter: function(value) {
-//     return 'Value: ' + value;
-//   }
-// });
-
-  var panOptions = {
+var panOptions = {
     animate: true,
     duration: 2
-
   }
 
       $(".myButton").click(function() {
@@ -67,19 +47,8 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
       }
     });
 
-        $("#aAccommodation").click(function(){
-        bizType = 'aAccommodation';
-        geojson.setStyle(style);
-        });
 
-
-  //CartoDB Basemap
-  // L.tileLayer(basemapUrl,{
-  //   attribution: attribution
-  // }).addTo(map3);
-
-
-  var geojson;
+var geojson;
 
   //this function takes a value and returns a color based on which bucket the value falls between
   function getColor(risk) {
@@ -93,11 +62,9 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
   // var legend = L.control({position: 'bottomright'});
   // legend.onAdd = function (map) {
-
   //     var div = L.DomUtil.create('div', 'info legend'),
   //         grades = [0, 25, 35, 45, 50],
   //         labels = [];
-
   //     // loop through our density intervals and generate a label with a colored square for each interval
   //     for (var i = 0; i < grades.length; i++) {
   //         div.innerHTML +=
@@ -106,19 +73,25 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
   //     }
   //     return div;
   // };
-
   // legend.addTo(map3);
 
-  // var risklevel = layer.feature.properties[bizType]
+  // function changeType(){
+  //   var type = $('#dropDown :selected').val();
+  //   // console.log("type" + type); 
+  //   if(mapColorType != type) {
+  //     mapColorType = type;
+  //       $.getJSON('data/risk.geojson', function(state_data) {
+  //         console.log(state_data);
+  //         geojson = L.geoJson(state_data,{
+  //           style: style, 
+  //           onEachFeature: onEachFeature
+  //         }).addTo(map3);
+  //       });
+  //   }
+  // }
 
-  // $("#aHigh").mouseover(function(){
-  // highrisk = risklevel > 50;
+var bizType = "afield_5";
 
-
-
-  var bizType = "afield_5";
-  //this function returns a style object, but dynamically sets fillColor based on the data
-  
   $("#aAccommodation").click(function(){
   bizType = 'aAccommodation';
   geojson.setStyle(style);
@@ -225,10 +198,10 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
   });
 
 
-$(".dropdown-menu li a").click(function(){
+  $(".dropdown-menu li a").click(function(){
   var selText = $(this).text();
   $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-});
+  });
 
   function style(feature) {
     // console.log(feature.properties[bizType]);
@@ -242,21 +215,6 @@ $(".dropdown-menu li a").click(function(){
     };
   }
 
-  // function changeType(){
-  //   var type = $('#dropDown :selected').val();
-  //   // console.log("type" + type); 
-  //   if(mapColorType != type) {
-  //     mapColorType = type;
-  //       $.getJSON('data/risk.geojson', function(state_data) {
-  //         console.log(state_data);
-  //         geojson = L.geoJson(state_data,{
-  //           style: style, 
-  //           onEachFeature: onEachFeature
-  //         }).addTo(map3);
-  //       });
-  //   }
-  // }
-  //this function is set to run when a user mouses over any polygon
   function mouseoverFunction(e) {
     var layer = e.target;
     var feature = layer.feature;
@@ -273,28 +231,18 @@ $(".dropdown-menu li a").click(function(){
         layer.bringToFront();
     }
 
-    //update the text in the infowindow with whatever was in the data
-    // console.log(feature);
-
-    //console.log(layer.feature.properties.rbLocation); 
-
-    // var roundup = math.round(layer.feature.properties[bizType])
-
-    var round = parseFloat(layer.feature.properties[bizType]);
-    var round2 = Math.round(round)
+  var round = parseFloat(layer.feature.properties[bizType]);
+  var round2 = Math.round(round)
 
     $('#side').html('<h3><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span> Business in ' + '<b>' + layer.feature.properties.aNeighborhood + '</b>' + ' have a ' + '<b>'+ round2 + '% ' + '</b>' + ' risk factor of opening a storefront based on recent closures and demographics changes.'); 
-  }
+    }
 
-  //this runs on mouseout
   function resetHighlight(e) {
     geojson.resetStyle(e.target);
   }
 
-  //this is executed once for each feature in the data, and adds listeners
   function onEachFeature(feature, layer) {
     // var cattype = $('#dropDown :selected').val();
-    // top5arr.push(feature.properties[mapColorType]);
     //console.log(feature.properties[cattype])  
     layer.on({
         mouseover: mouseoverFunction,
@@ -302,10 +250,7 @@ $(".dropdown-menu li a").click(function(){
         //click: zoomToFeature
     });
   }
-
-  //all of the helper functions are defined and ready to go, so let's get some data and render it!
-
-  //be sure to specify style and onEachFeature options when calling L.geoJson().
+  
   $.getJSON('data/riskmeasure.geojson', function(state_data) {
     console.log(state_data);
     geojson = L.geoJson(state_data,{
