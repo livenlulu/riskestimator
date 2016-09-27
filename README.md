@@ -1,4 +1,4 @@
-<a href="http://livenlulu.github.io/riskestimator/"><img src="data/businessrisk.png" alt="linkkk" style="max-width: 60%;"/></a>
+<a href="http://livenlulu.github.io/riskestimator/"><img src="data/businessrisk.png" alt="linkkk" style="width: 300px; height:100px;"/></a>
 
 ## [Small Business Closure Risk Prediction Map](http://livenlulu.github.io/riskestimator/)
 
