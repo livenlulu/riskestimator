@@ -306,8 +306,8 @@
       text-transform: uppercase;
     }
 
-    #user-content-linkkk {
-      max-width: 60% !important;
+    .markdown-body img {
+      max-width: 600px !important;
     }
 
   /*#custom-search-form {
