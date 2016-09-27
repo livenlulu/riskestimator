@@ -310,11 +310,6 @@
       max-width: 600px !important;
     }
 
-    img[alt="pic"] {
-      max-width: 700px;
-      width: 600px;
-      display: block;
-    }
   /*#custom-search-form {
       margin:0;
       margin-top: 15px;
