@@ -1,4 +1,4 @@
-<a href="http://livenlulu.github.io/riskestimator/"><img src="data/businessrisk.png" id="linkkk" style="width: 60%;"/></a>
+<a href="http://livenlulu.github.io/riskestimator/"><img src="data/businessrisk.png" id="linkkk" style="max-width:100%; width: 600px;"/></a>
 
 
 ![pic](data/businessrisk.png)
