@@ -312,6 +312,7 @@
 
     img[alt="pic"] {
       max-width: 700px;
+      width: 600px;
       display: block;
     }
   /*#custom-search-form {
