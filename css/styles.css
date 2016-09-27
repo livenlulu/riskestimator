@@ -306,6 +306,10 @@
       text-transform: uppercase;
     }
 
+    img[alt=linkk] {
+      width: 300px;
+    }
+
   /*#custom-search-form {
       margin:0;
       margin-top: 15px;
