@@ -306,7 +306,9 @@
       text-transform: uppercase;
     }
 
-
+    .markdown-body img {
+      max-width: 60% !important;
+    }
 
   /*#custom-search-form {
       margin:0;
