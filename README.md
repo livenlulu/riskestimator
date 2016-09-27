@@ -1,4 +1,4 @@
-![Alt text](data/businessrisk.png)
+![Alt text](data/businessrisk.png =300px)
 
 ## [Small Business Closure Risk Prediction Map](http://livenlulu.github.io/riskestimator/)
 
