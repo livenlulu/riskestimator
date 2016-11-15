@@ -304,9 +304,11 @@
 */
 
     #loc {
-      width: 170px;
+     padding-left: 0px;
+     padding-right: 0px;
       margin-top: 0px;
       margin-bottom: 0px;
+      width: 140px;
      }
 
     #left {
@@ -333,7 +335,7 @@
       max-width: 600px !important;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
     .sidebar { 
       width: 40%;
       z-index: 8;
@@ -406,6 +408,17 @@
 
     .dropdown {
       margin-bottom: 13px;
+    }
+
+    #appr {
+      z-index: 29;
+    }
+    .apprise {
+      z-index: 30;
+    }
+
+    #loc {
+      width: 100%;
     }
     }
 
