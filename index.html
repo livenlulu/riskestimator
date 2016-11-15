@@ -29,15 +29,33 @@
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://livenlulu.github.io/riskestimator/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><b> &nbsp;Small Business Closure Risk Prediction Map, 2018 Projections</b></a>
+      <a class="navbar-brand" href="http://livenlulu.github.io/riskestimator/"><span class="glyphicon glyphicon-home"></span><b> &nbsp;Risk Prediction Map - 2018<br> &nbsp; &nbsp; &nbsp; on Small Business Closure</b></a>
     </div>
 
-    <div class="nav navbar-nav navbar-right">
-       <li><a onclick="Apprise('<b><h1>How the Risk Measurement was Calculated</b></h1><br><b>Dependent variable: </b>Number of small businesses with < 50 employees closed down<br><b>Independent variables: </b>Rent growth, unemployment, median income, real estate price, population<br><br><b>Regression Model: </b>Step backwards feature selection method. </b><b>R<sup>2 </sup>Value: </b>79% accuracy<br>Based on the model, we predicted the growth measure for each of the business sectors using years 1998 - 2013. <br><br><h5>Sources: ZipCode Business Patterns 1998 - 2013, Zillow Data 2006, 2013, ACS, U.S. Census Bureau 2010 - 2015</h5><br>');">Analysis</a></li>
-    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <div class="nav navbar-nav navbar-right">
+
+        <li class="dropdown" id="loc">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manhattan, NY<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" id="one" class="myButton">Manhattan, NY</a></li>
+                <li><a href="#" id="two" class="myButton">Brooklyn, NY</a></li>
+                <li><a href="#" id="three" class="myButton">Bronx, NY</a></li>
+                <li><a href="#" id="four" class="myButton">Queens, NY</a></li>
+                <li><a href="#" id="five" class="myButton">Staten Island, NY</a></li>
+              </ul>
+            </li>
+
+         <li><a onclick="Apprise('<b><h1>How the Risk Measurement was Calculated</b></h1><br><b>Dependent variable: </b>Number of small businesses with < 50 employees closed down<br><b>Independent variables: </b>Rent growth, unemployment, median income, real estate price, population<br><br><b>Regression Model: </b>Step backwards feature selection method. </b><b>R<sup>2 </sup>Value: </b>79% accuracy<br>Based on the model, we predicted the growth measure for each of the business sectors using years 1998 - 2013. <br><br><h5>Sources: ZipCode Business Patterns 1998 - 2013, Zillow Data 2006, 2013, ACS, U.S. Census Bureau 2010 - 2015</h5><br>');">Data Analysis</a></li>
+      </div>
+   </div>
 
   </div> 
   </nav>
@@ -51,12 +69,12 @@
   <div class="sidebar mainSidebar" style="display:block;">
     <h2>New York City Small Business Greatest Opportunity</h2>
 
-    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detailed data.
+    <div class="dropdown" style="display:block;"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>&nbsp;&nbsp;Choose a region on the map to view detailed data.
     </div>
 
     <div class="dropdown">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Choose Type of Business &nbsp;
+          Type of Business &nbsp;
       <span class="caret"></span>
       </button>
         
@@ -87,15 +105,8 @@
 
     <div id="side">
           <h3><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>&nbsp;Business in <b>New York City</b> have a <b>38%</b> risk factor of opening a storefront based on recent closures and demographics changes.<h3>
-    </div><br>
-    
-    <div class="btn-group" role="group" aria-label="...">
-          <button type="button" id="one" class="myButton">Manhattan</button>
-          <button type="button" id="two" class="myButton">Brooklyn</button>
-          <button type="button" id="three" class="myButton">Bronx</button><br>
-          <button type="button" id="four" class="myButton">Queens</button>
-          <button type="button" id="five" class="myButton">Staten Island</button>
     </div>
+    
 
   </div>
 
