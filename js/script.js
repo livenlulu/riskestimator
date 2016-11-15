@@ -10,7 +10,9 @@ var statenisland = [40.576413,-74.104156];
  
 
 var myZoom = 11;
-var map3 = L.map('map3').setView( [40.729308,-73.871040], myZoom);
+var map3 = L.map('map3', {
+  tap: false
+}).setView( [40.729308,-73.871040], myZoom);
     map3.addLayer(layer)
 
 var panOptions = {
