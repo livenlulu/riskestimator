@@ -336,7 +336,7 @@
     @media screen and (max-width: 767px) {
     .sidebar { 
       width: 40%;
-      z-index: 20;
+      z-index: 8;
     }
 
     .scrollable-menu {
@@ -357,9 +357,9 @@
       font-size: 10px;
       font-weight: 400;
       position: absolute;
-      height: 255px;
-      top: 400px;
-      width: 200px;
+      height: 240px;
+      top: 274px;
+      width: 180px;
       margin-left: 10px;
       text-align: center;
       color: #000;
@@ -368,8 +368,44 @@
       /*border-style: solid;*/
       opacity: 0.9;
     }  
+
+    #tit {
+      font-size: 12px;
+    }
+ 
     .heatMapBar {
-      margin-top: 20px !important;
+      margin-top: 5px !important;
+    }
+
+    .infoWindow li.min {
+      margin-top: 22px;
+    }
+
+    .infoWindow li.max {
+      margin-top: 22px;
+    }
+
+    .infoWindow h5 {
+      margin-top: 2px;
+    }
+
+    .sidebar h2 {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-top: 0px;
+      margin-bottom: 3px;
+    }
+
+    .sidebar h3 {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0px;
+    }
+
+
+    .dropdown {
+      margin-bottom: 13px;
     }
     }
 
