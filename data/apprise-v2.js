@@ -186,7 +186,7 @@ function Apprise(text, options) {
 	
 	$overlay.fadeIn(300);
 	$Apprise.show().animate({
-		top: '20%'
+		top: '12%'
 	}, 
 		settings.animation, 
 		function() {
